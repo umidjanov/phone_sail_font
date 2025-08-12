@@ -37,26 +37,38 @@ export default function userHome() {
         className="container flex w-full justify-between flex-col sm:flex-row items-center text-center sm:text-left"
         data-aos="fade-down"
       >
-        <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
-          iPhone
-        </h1>
-        <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
-          Samsung
-        </h1>
-        <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
-          Redmi
-        </h1>
-        <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
-          Nokia
-        </h1>
-        <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
-          Poco
-        </h1>
-        <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
-          Huawei
-        </h1>
+        <Link>
+          <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
+            iPhone
+          </h1>
+        </Link>
+        <Link>
+          <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
+            Samsung
+          </h1>
+        </Link>
+        <Link>
+          <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
+            Redmi
+          </h1>
+        </Link>
+        <Link>
+          <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
+            Nokia
+          </h1>
+        </Link>
+        <Link>
+          <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
+            Poco
+          </h1>
+        </Link>
+        <Link>
+          <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
+            Huawei
+          </h1>
+        </Link>
         <div className="mt-4 sm:mt-0">
-          <p className="text-lg sm:text-xl font-medium text-gray-800">
+          <p className="text-lg sm:text-xl font-medium text-gray-800 cursor-pointer">
             Designed to be loved.
           </p>
         </div>

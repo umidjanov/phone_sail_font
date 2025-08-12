@@ -10,6 +10,7 @@ import {
 import { MdPhoneIphone, MdFitnessCenter } from "react-icons/md";
 import { PiPenNibFill } from "react-icons/pi";
 import { BsPhone } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const accessories = [
   { icon: <FaApple size={28} />, label: "AirTag and Accessories" },
@@ -54,8 +55,10 @@ export default function Category() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
           >
-            <div className="text-black">{item.icon}</div>
-            <p className="text-lg text-gray-700">{item.label}</p>
+            <Link className="flex items-center justify-center gap-[20px]">
+              <div className="text-black">{item.icon}</div>
+              <p className="text-lg text-gray-700">{item.label}</p>
+            </Link>
           </motion.div>
         ))}
       </div>
