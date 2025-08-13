@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Typography, IconButton } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../videos/photo_2025-06-11_13-35-58-removebg-preview.png";
 export default function NavbarDefault() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -14,6 +14,10 @@ export default function NavbarDefault() {
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      {/* <NavLink */}
+      {/* className={({ isActive }) => (isActive ? "active" : "")} */}
+      {/* to="/allPhones" */}
+      {/* > */}
       <Typography
         as="li"
         variant="small"
@@ -32,11 +36,14 @@ export default function NavbarDefault() {
             fill="#90A4AE"
           />
         </svg>
-
-        <a href="/allPhones" className="flex items-center">
-          All phones
-        </a>
+        <NavLink
+          to="/allPhones"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          <h1 className="flex items-center">All phones</h1>
+        </NavLink>
       </Typography>
+      {/* </NavLink> */}
       <Typography
         as="li"
         variant="small"
@@ -57,7 +64,12 @@ export default function NavbarDefault() {
             fill="#90A4AE"
           />
         </svg>
-        <Link to="/accessors">Accessories</Link>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : "")}
+          to="/accessors"
+        >
+          <h1>Accessories</h1>
+        </NavLink>
       </Typography>
       <Typography
         as="li"
@@ -77,7 +89,12 @@ export default function NavbarDefault() {
             fill="#90A4AE"
           />
         </svg>
-        <Link to="/block">Blocks</Link>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : "")}
+          to="/block"
+        >
+          <h1>Blocks</h1>
+        </NavLink>
       </Typography>
       <Typography
         as="li"
@@ -99,9 +116,12 @@ export default function NavbarDefault() {
             fill="#90A4AE"
           />
         </svg>
-        <a href="#" className="flex items-center">
-          Docs
-        </a>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : "")}
+          to="/docs"
+        >
+          <h1 className="flex items-center">Docs</h1>
+        </NavLink>
       </Typography>
     </ul>
   );
