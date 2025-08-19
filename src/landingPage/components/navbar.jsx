@@ -14,10 +14,6 @@ export default function NavbarDefault() {
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      {/* <NavLink */}
-      {/* className={({ isActive }) => (isActive ? "active" : "")} */}
-      {/* to="/allPhones" */}
-      {/* > */}
       <Typography
         as="li"
         variant="small"
@@ -43,7 +39,6 @@ export default function NavbarDefault() {
           <h1 className="flex items-center">All phones</h1>
         </NavLink>
       </Typography>
-      {/* </NavLink> */}
       <Typography
         as="li"
         variant="small"

@@ -1,4 +1,6 @@
 import axios from "axios";
 const instance = axios.create({
-  baseURL: "https://telefon-sail-phones-beck.vercel.app/",
+  baseURL: "http://localhost:9090",
 });
+
+export default instance;

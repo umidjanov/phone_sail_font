@@ -88,19 +88,15 @@ export default function NavbarDefault() {
     >
       <div className="container flex flex-col gap-[20px] text-center">
         <Link to={"/home"}>
-          <Typography
-            as="a"
-            href="#"
-            className=" cursor-pointer w-[201.5px] font-bold text-white"
-          >
+          <Typography className="cursor-pointer w-[201.5px] font-bold text-white">
             TELEFON SAVDOSI
           </Typography>
         </Link>
         <div className="hidden lg:block">{navList}</div>
-        <div className="flex flex-col gap-[20px] items-center gap-x-1"></div>
+
         <IconButton
           variant="text"
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent  focus:bg-transparent active:bg-transparent lg:hidden"
+          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >
@@ -136,19 +132,21 @@ export default function NavbarDefault() {
           )}
         </IconButton>
       </div>
-      <MobileNav open={openNav}>
-        <div className="container mx-auto">
+
+      {/* ✅ Mobile menu replacement */}
+      {openNav && (
+        <div className="lg:hidden container mx-auto">
           {navList}
-          <div className="flex items-center gap-x-1">
-            <Button fullWidth variant="text" size="sm" className="">
+          <div className="flex items-center gap-x-1 mt-4">
+            <Button fullWidth variant="text" size="sm">
               <span>Log In</span>
             </Button>
-            <Button fullWidth variant="gradient" size="sm" className="">
+            <Button fullWidth variant="gradient" size="sm">
               <span>Sign in</span>
             </Button>
           </div>
         </div>
-      </MobileNav>
+      )}
     </Navbar>
   );
 }
