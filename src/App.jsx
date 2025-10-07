@@ -20,6 +20,9 @@ import Section from "./landingPage/components/section";
 import Category from "./landingPage/components/category";
 import Accessors from "./landingPage/components/accessuars";
 import { Block } from "./landingPage/components/block";
+import AirTag from "./landingPage/pages/airTag/airTag";
+import Cases from "./landingPage/pages/cases/cases";
+import ShopCases from "./landingPage/pages/shopCases/shopCases";
 
 export default function App() {
   return (
@@ -53,6 +56,10 @@ export default function App() {
       <Route path="/category" element={<Category />} />
       <Route path="/accessors" element={<Accessors />} />
       <Route path="/block" element={<Block />} />
+      <Route path="/airTag" element={<AirTag />} />
+      <Route path="/cases" element={<Cases />} />
+      <Route path="/shopCases" element={<ShopCases />} />
+
     </Routes>
   );
 }

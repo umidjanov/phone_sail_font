@@ -5,6 +5,7 @@ import { Footer } from "../components/footer";
 import { Carusel } from "../components/carusel";
 import NavbarDefault from "../components/navbar";
 import Section from "../components/section";
+import Header from "../components/header";
 
 export default function TypeGetAllPhones() {
   const { id } = useParams();
@@ -18,7 +19,8 @@ export default function TypeGetAllPhones() {
   }, [id]);
 
   return (
-    <div className="flex py-[10px] flex-col">
+    <div className="flex flex-col mt-[20px]">
+      <Header />
       <NavbarDefault />
       <div className="flex flex-wrap justify-center gap-6 p-10">
         <Carusel />

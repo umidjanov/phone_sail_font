@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import { instance } from "../../admin/utils/axios";
 import NavbarDefault from "../components/navbar";
 import { Footer } from "../components/footer";
-import Section from "../components/section";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Accessors from "../components/category";
+import Header from "../components/header";
+import Section from "../components/section";
 
 export default function userHome() {
   const [turlar, setTurlar] = useState([]);
@@ -30,50 +31,9 @@ export default function userHome() {
   );
 
   return (
-    <div className="flex justify-center flex-col items-center py-[10px] gap-[40px]">
+    <div className="flex justify-center flex-col items-center gap-[40px]">
       <NavbarDefault />
-
-      <header
-        className="container flex w-full justify-between flex-col sm:flex-row items-center text-center sm:text-left"
-        data-aos="fade-down"
-      >
-        <Link>
-          <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
-            iPhone
-          </h1>
-        </Link>
-        <Link>
-          <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
-            Samsung
-          </h1>
-        </Link>
-        <Link>
-          <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
-            Redmi
-          </h1>
-        </Link>
-        <Link>
-          <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
-            Nokia
-          </h1>
-        </Link>
-        <Link>
-          <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
-            Poco
-          </h1>
-        </Link>
-        <Link>
-          <h1 className="text-xl sm:text-2xl font-semibold tracking-tight">
-            Huawei
-          </h1>
-        </Link>
-        <div className="mt-4 sm:mt-0">
-          <p className="text-lg sm:text-xl font-medium text-gray-800 cursor-pointer">
-            Designed to be loved.
-          </p>
-        </div>
-      </header>
-
+      <Header />
       <video
         className="w-[1320px] shadow-xl transition-shadow duration-300 ease-in-out rounded-2xl border"
         src="videos/iphone video.mp4"
@@ -117,6 +77,7 @@ export default function userHome() {
       <div data-aos="fade-up">
         <Accessors />
       </div>
+      <Section />
       <Footer />
     </div>
   );
